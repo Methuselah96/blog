@@ -1,14 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Nathan Bierema's Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Nathan Bierema`,
+      summary: `who is a technical lead at Paragon Component Systems, maintainer of redux-devtools, and co-maintainer of react-select and immutable-js.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `nathanbierema`,
     },
   },
   plugins: [
