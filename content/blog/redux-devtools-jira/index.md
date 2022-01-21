@@ -19,7 +19,7 @@ How did an update to the Redux DevTools extension break Jira? It all came down t
 + import _ from 'lodash';
 ```
 
-Why was this change made? I've recently been trying to avoid ["deep imports"](https://gist.github.com/daleyjem/0f38f561a4e91e58eba580889f38330f) as a general rule since the [new exports field](https://webpack.js.org/guides/package-exports/) used by Webpack disallows any deep imports that are not explicitly defined. I thought this was the more common way to import Lodash anyway and that Webpack would be able to tree-shake the unused functions. Therefore I expected the two ways of importing Lodash to be equivalent. (I now know that the former way of importing Lodash is [recommended for smaller bundles](https://github.com/lodash/lodash#installation).)
+Why was this change made? I've recently been trying to avoid ["deep imports"](https://gist.github.com/daleyjem/0f38f561a4e91e58eba580889f38330f) as a general rule since the [new exports field](https://webpack.js.org/guides/package-exports/) used by Webpack disallows any deep imports that are not explicitly defined. I thought this was the more common way to import Lodash anyway and that there wouldn't be any dangerous side effects by importing it through the main entry point. (I now know that the former way of importing Lodash is [recommended for smaller bundles](https://github.com/lodash/lodash#installation).)
 
 Little did I know that the `main` field of `lodash` still points to a UMD build which sets `window._` to the Lodash library. I would expect most libraries these days to point to a CommonJS build and expose the UMD build in a separate field. There is an [open issue](https://github.com/lodash/lodash/issues/5107) on the Lodash repository to address this situation.
 
