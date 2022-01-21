@@ -50,6 +50,6 @@ The biggest difficulty in this situation is having to wait for the extension to 
 
 #### How does the community fix the issues that contributed to this situation?
 
-- Up-vote the [Lodash issue](https://github.com/lodash/lodash/issues/5107) to export ES modules. It's unfortunate that one of the most depended NPM packages is specifying a UMD build in their `main` entry.
+- Up-vote the [Lodash issue](https://github.com/lodash/lodash/issues/5107) to export ES modules. It's unfortunate that one of the most depended upon NPM packages is specifying a UMD build in their `main` entry.
 - If you happen to be an Atlassian developer who has the ability to do something about this, upgrade the version of AUI being imported in Jira or figure out a way to patch the old version of AUI. I imagine that there's already efforts to move off of that old version of AUI and that it's much easier said than done, but maybe this incident will help provide a good reason for prioritizing those internal changes.
 - Chrome Extensions should provide a better way to recover from a situation like this.
