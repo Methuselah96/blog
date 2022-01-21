@@ -55,6 +55,10 @@ const Seo = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
+          property: 'og:image',
+          content: 'https://pbs.twimg.com/profile_images/1479466141105983496/nG8PiF3y_400x400.jpg',
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
